@@ -1,0 +1,74 @@
+1. What's the model? why all the models are wrong, but some are useful?
+
+   A:The model is simplified to the question. All the models are wrong but some are useful because the previous model may be later overturned, but it is applicable to certain issues at that time.
+    1. 模型指对问题、现象、客观事物或者规律进行抽象后的表达方式
+    2. 因为模型是抽象之后的产物，只保留了主要的信息或者有用的信息，所以所有的模型都不能完全代表原本的事物；但也正因为模型是抽象后的产物，过滤掉了很多对分析没有帮助的信息，保留了少量有用的信息，所以对分析问题、理解客观事物以及发现规律很有帮助
+
+
+2. What's the underfitting and overfitting? List the reasons that could make model overfitting or underfitting. 
+
+   A: underfitting：The model is too simple. the reasons is parameters are too little but too much data
+      原因：
+      1、模型过于简单
+      2、训练时间不够
+      3、使用的特征与目标任务关系不大 
+      
+      解决方法：
+      1、使用更复杂的模型
+      2、训练足够的时间
+      3、寻找更为关键的特征
+      4、减弱正则化效果 
+       
+   参考 https://github.com/Brycexxx/NLP-Assignment/blob/master/Lesson-06/hw.md
+       
+      overfitting: The model is too comlex. the reasons is too little data,uneven data distribution,too large coefficient.
+      
+      over-fitting原因：1、模型过于复杂  2、数据太少   3、数据不平衡
+     
+      解决方法：
+      1、降低模型复杂度
+      2、使用正则化方法 (L1，L2，Dropout)
+      3、对数据进行上采样或下采样得到平衡数据
+      4、增大数据量
+      5、重新清洗数据，剔除异常点
+      6、早停
+      7、交叉验证
+      8、剪枝
+      9、Ensemble (boosting，bagging)
+
+   
+3. What's the precision, recall, AUC, F1, F2score. What are they mainly target on? 
+
+   A: precision: Precision=TP / (TP+FP). Namely in predict positive for all the test data, the ratio of real positive. precision reflects the ability of the classification model to recognize the negative samples, The higher the precision, the stronger the model's ability to recognize the negative samples.
+
+
+   
+      Recall: Recall=TP / (TP+FN). Namely in positive for all actual test data, the ratio of real positive.Recall reflects the ability of the classification model to recognize the positive samples, The higher the recall, the stronger the model's ability to recognize the positive samples.
+
+      
+      AUC is the area under the curve of ROC. It is the standard for evaluating binary classification prediction model.
+      
+      F1Score: F1Score = 2*(Precision * Recall) / (Precision + Recall). The purpose is to integrated precision and recall so that obtain quantitative results. Compared with F2Score, F1score thinks the precision is more important.
+      
+      F2score: 5*(Precision * Recall) / (4Precision + Recall). Compared with F1Score, F2score thinks the recall is more important.
+      
+      F1Score and F2Score mainly target to evaluate the accuracy of the model,but they have different preferences for model.
+
+
+
+4. Based on our course and yourself mind, what's the machine learning?
+   A: Machine learning is a research field that computer to learn without the need for specific programming. when we have some data,and we want to use this data to learn model that has good performance on unseen data,we can use machine learning. In traditional programming, the software developers to hardcode; In machine learning, is a machine to study from the data.
+
+
+
+   
+   
+5. "正确定义了机器学习模型的评价标准(evaluation)， 问题基本上就已经解决一半". 这句话是否正确？你是怎么看待的？
+
+   答: 正确。因为评估一个模型是建立一个有效的机器学习模型的核心部分。不同的评价标准用于不同类型的问题。建立机器学习模型的想法是基于一个建设性的反馈原则。构建一个模型，从指标中获得反馈，进行改进，直到达到理想的精度为止。评价标准解释了模型的性能。评价标准的一个重要方面是它们区分模型结果的能力。
+   
+   
+   
+   
+   
+   
